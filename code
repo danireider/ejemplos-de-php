@@ -1,0 +1,43 @@
+import os
+
+# Estructura de carpetas y archivos basada en la lista del usuario
+structure = {
+    "Basics": {
+        "PHP_HOME": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP HOME</title></head><body><h1>¡Bienvenido a PHP!</h1><?php echo "¡Aprende PHP con nosotros!"; ?></body></html>',
+        "PHP_Intro": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Intro</title></head><body><?php echo "Hola, PHP!"; ?></body></html>',
+        "PHP_Install": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Install</title></head><body><p>Instalación de PHP</p></body></html>',
+        "PHP_Syntax": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Syntax</title></head><body><?php echo "Hola"; ?></body></html>',
+        "PHP_Comments": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Comments</title></head><body><?php // Esto es un comentario ?></body></html>',
+        "PHP_Variables": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Variables</title></head><body><?php $x = 5; echo $x; ?></body></html>',
+        "PHP_Echo_Print": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Echo / Print</title></head><body><?php echo "Hola"; print " Mundo"; ?></body></html>',
+        "PHP_Data_Types": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Data Types</title></head><body><?php $x = 5; $y = "Hola"; var_dump($x, $y); ?></body></html>',
+        "PHP_Strings": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Strings</title></head><body><?php echo strlen("Hola"); ?></body></html>',
+        "PHP_Numbers": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Numbers</title></head><body><?php $x = 5; echo $x + 3; ?></body></html>',
+        "PHP_Casting": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Casting</title></head><body><?php $x = "5"; $y = (int)$x; echo $y; ?></body></html>',
+        "PHP_Math": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Math</title></head><body><?php echo pi(); ?></body></html>',
+        "PHP_Constants": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Constants</title></head><body><?php define("GREETING", "Hola"); echo GREETING; ?></body></html>',
+        "PHP_Magic_Constants": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Magic Constants</title></head><body><?php echo __FILE__; ?></body></html>',
+        "PHP_Operators": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Operators</title></head><body><?php $x = 5; $y = 3; echo $x + $y; ?></body></html>',
+        "PHP_If_Else_Elseif": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP If...Else...Elseif</title></head><body><?php $x = 10; if ($x > 5) { echo "Mayor"; } else { echo "Menor"; } ?></body></html>',
+        "PHP_Switch": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Switch</title></head><body><?php $day = 1; switch ($day) { case 1: echo "Lunes"; break; } ?></body></html>',
+        "PHP_Loops": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Loops</title></head><body><?php for ($i = 0; $i < 3; $i++) { echo $i; } ?></body></html>',
+        "PHP_Functions": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Functions</title></head><body><?php function greet() { echo "Hola"; } greet(); ?></body></html>',
+        "PHP_Arrays": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Arrays</title></head><body><?php $fruits = array("Manzana", "Plátano"); echo $fruits[0]; ?></body></html>',
+        "PHP_Superglobals": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Superglobals</title></head><body><?php echo $_SERVER["HTTP_HOST"]; ?></body></html>',
+        "PHP_RegEx": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP RegEx</title></head><body><?php $pattern = "/hello/"; echo preg_match($pattern, "hello world"); ?></body></html>'
+ },
+          
+# Crear la carpeta principal
+os.makedirs("PHP_Examples", exist_ok=True)
+
+# Crear subcarpetas y archivos
+for category, subtopics in structure.items():
+    category_path = os.path.join("PHP_Examples", category)
+    os.makedirs(category_path, exist_ok=True)
+    for subtopic, content in subtopics.items():
+        subtopic_path = os.path.join(category_path, subtopic)
+        os.makedirs(subtopic_path, exist_ok=True)
+        with open(os.path.join(subtopic_path, "index.php"), "w") as f:
+            f.write(content)
+
+print("Carpetas y archivos de PHP creados exitosamente.")
