@@ -26,7 +26,14 @@ structure = {
         "PHP_Superglobals": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Superglobals</title></head><body><?php echo $_SERVER["HTTP_HOST"]; ?></body></html>',
         "PHP_RegEx": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP RegEx</title></head><body><?php $pattern = "/hello/"; echo preg_match($pattern, "hello world"); ?></body></html>'
  },
-          
+        "Forms": {
+        "PHP_Forms": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Forms</title></head><body><p>Introducción a formularios en PHP</p></body></html>',
+        "PHP_Form_Handling": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Handling</title></head><body><form method="post" action="welcome.php"><input type="text" name="name"><input type="submit"></form></body></html>',
+        "PHP_Form_Validation": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Validation</title></head><body><?php if (empty($_POST["name"])) { echo "Nombre requerido"; } ?></body></html>',
+        "PHP_Form_Required": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Required</title></head><body><form method="post"><input type="text" name="name" required><input type="submit"></form></body></html>',
+        "PHP_Form_URL_Email": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form URL/E-mail</title></head><body><form method="post"><input type="email" name="email"><input type="submit"></form></body></html>',
+        "PHP_Form_Complete": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Complete</title></head><body><form method="post" action="process.php"><input type="text" name="name"><input type="email" name="email"><input type="submit"></form></body></html>'
+    },  
 # Crear la carpeta principal
 os.makedirs("PHP_Examples", exist_ok=True)
 
