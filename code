@@ -25,7 +25,7 @@ structure = {
         "PHP_Arrays": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Arrays</title></head><body><?php $fruits = array("Manzana", "Plátano"); echo $fruits[0]; ?></body></html>',
         "PHP_Superglobals": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Superglobals</title></head><body><?php echo $_SERVER["HTTP_HOST"]; ?></body></html>',
         "PHP_RegEx": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP RegEx</title></head><body><?php $pattern = "/hello/"; echo preg_match($pattern, "hello world"); ?></body></html>'
- },
+    },
         "Forms": {
         "PHP_Forms": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Forms</title></head><body><p>Introducción a formularios en PHP</p></body></html>',
         "PHP_Form_Handling": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Handling</title></head><body><form method="post" action="welcome.php"><input type="text" name="name"><input type="submit"></form></body></html>',
@@ -34,6 +34,21 @@ structure = {
         "PHP_Form_URL_Email": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form URL/E-mail</title></head><body><form method="post"><input type="email" name="email"><input type="submit"></form></body></html>',
         "PHP_Form_Complete": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Complete</title></head><body><form method="post" action="process.php"><input type="text" name="name"><input type="email" name="email"><input type="submit"></form></body></html>'
     },  
+        "Advanced": {
+        "PHP_Date_and_Time": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Date and Time</title></head><body><?php echo date("Y-m-d"); ?></body></html>',
+        "PHP_Include": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Include</title></head><body><?php include "header.php"; ?></body></html>',
+        "PHP_File_Handling": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP File Handling</title></head><body><?php $file = fopen("test.txt", "r"); echo fread($file, filesize("test.txt")); fclose($file); ?></body></html>',
+        "PHP_File_Open_Read": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP File Open/Read</title></head><body><?php $file = fopen("test.txt", "r"); echo fread($file, filesize("test.txt")); fclose($file); ?></body></html>',
+        "PHP_File_Create_Write": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP File Create/Write</title></head><body><?php $file = fopen("newfile.txt", "w"); fwrite($file, "Hola"); fclose($file); ?></body></html>',
+        "PHP_File_Upload": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP File Upload</title></head><body><form action="upload.php" method="post" enctype="multipart/form-data"><input type="file" name="file"><input type="submit"></form></body></html>',
+        "PHP_Cookies": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Cookies</title></head><body><?php setcookie("user", "Juan", time() + 3600); echo $_COOKIE["user"]; ?></body></html>',
+        "PHP_Sessions": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Sessions</title></head><body><?php session_start(); $_SESSION["username"] = "Juan"; echo $_SESSION["username"]; ?></body></html>',
+        "PHP_Filters": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Filters</title></head><body><?php $email = "test@example.com"; if (filter_var($email, FILTER_VALIDATE_EMAIL)) { echo "Email válido"; } ?></body></html>',
+        "PHP_Filters_Advanced": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Filters Advanced</title></head><body><?php $int = 100; if (filter_var($int, FILTER_VALIDATE_INT, ["options" => ["min_range" => 0, "max_range" => 100]])) { echo "Número válido"; } ?></body></html>',
+        "PHP_Callback_Functions": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Callback Functions</title></head><body><?php function greet($name) { echo "Hola, $name"; } call_user_func("greet", "Juan"); ?></body></html>',
+        "PHP_JSON": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP JSON</title></head><body><?php $json = \'{"name": "Juan"}\'; $obj = json_decode($json); echo $obj->name; ?></body></html>',
+        "PHP_Exceptions": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Exceptions</title></head><body><?php try { throw new Exception("Error"); } catch (Exception $e) { echo $e->getMessage(); } ?></body></html>'
+    },
 # Crear la carpeta principal
 os.makedirs("PHP_Examples", exist_ok=True)
 
