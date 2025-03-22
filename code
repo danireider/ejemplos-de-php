@@ -49,6 +49,22 @@ structure = {
         "PHP_JSON": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP JSON</title></head><body><?php $json = \'{"name": "Juan"}\'; $obj = json_decode($json); echo $obj->name; ?></body></html>',
         "PHP_Exceptions": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Exceptions</title></head><body><?php try { throw new Exception("Error"); } catch (Exception $e) { echo $e->getMessage(); } ?></body></html>'
     },
+        "OOP": {
+        "PHP_What_is_OOP": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP What is OOP</title></head><body><p>Introducción a OOP en PHP</p></body></html>',
+        "PHP_Classes_Objects": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Classes/Objects</title></head><body><?php class Person { public $name; } $p = new Person(); $p->name = "Juan"; echo $p->name; ?></body></html>',
+        "PHP_Constructor": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Constructor</title></head><body><?php class Person { function __construct($name) { echo "Hola, $name"; } } $p = new Person("Juan"); ?></body></html>',
+        "PHP_Destructor": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Destructor</title></head><body><?php class Person { function __destruct() { echo "Adiós"; } } $p = new Person(); ?></body></html>',
+        "PHP_Access_Modifiers": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Access Modifiers</title></head><body><?php class Person { public $name; private $age; } ?></body></html>',
+        "PHP_Inheritance": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Inheritance</title></head><body><?php class Animal { function speak() { echo "Animal habla"; } } class Dog extends Animal { function speak() { echo "Perro ladra"; } } $d = new Dog(); $d->speak(); ?></body></html>',
+        "PHP_Constants": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Constants</title></head><body><?php class Math { const PI = 3.14; } echo Math::PI; ?></body></html>',
+        "PHP_Abstract_Classes": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Abstract Classes</title></head><body><?php abstract class Animal { abstract function speak(); } class Dog extends Animal { function speak() { echo "Perro ladra"; } } $d = new Dog(); $d->speak(); ?></body></html>',
+        "PHP_Interfaces": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Interfaces</title></head><body><?php interface Animal { function speak(); } class Dog implements Animal { function speak() { echo "Perro ladra"; } } $d = new Dog(); $d->speak(); ?></body></html>',
+        "PHP_Traits": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Traits</title></head><body><?php trait Greet { function sayHello() { echo "Hola"; } } class Person { use Greet; } $p = new Person(); $p->sayHello(); ?></body></html>',
+        "PHP_Static_Methods": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Static Methods</title></head><body><?php class Math { static function add($a, $b) { return $a + $b; } } echo Math::add(2, 3); ?></body></html>',
+        "PHP_Static_Properties": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Static Properties</title></head><body><?php class Counter { static $count = 0; } echo Counter::$count; ?></body></html>',
+        "PHP_Namespaces": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Namespaces</title></head><body><?php namespace MyProject; class Person { } $p = new Person(); ?></body></html>',
+        "PHP_Iterables": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Iterables</title></head><body><?php function printIterable(iterable $myIterable) { foreach ($myIterable as $item) { echo $item; } } $arr = ["a", "b", "c"]; printIterable($arr); ?></body></html>'
+    },
 # Crear la carpeta principal
 os.makedirs("PHP_Examples", exist_ok=True)
 
