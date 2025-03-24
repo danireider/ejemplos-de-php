@@ -81,6 +81,14 @@ structure = {
         "MySQL_Update_Data": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>MySQL Update Data</title></head><body><?php $conn = new mysqli("localhost", "user", "pass", "mydb"); $sql = "UPDATE users SET name=\'Pedro\' WHERE id=1"; if ($conn->query($sql) === TRUE) { echo "Dato actualizado"; } ?></body></html>',
         "MySQL_Limit_Data": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>MySQL Limit Data</title></head><body><?php $conn = new mysqli("localhost", "user", "pass", "mydb"); $result = $conn->query("SELECT * FROM users LIMIT 5"); while ($row = $result->fetch_assoc()) { echo $row["name"]; } ?></body></html>'
     },
+        "AJAX": {
+        "AJAX_Intro": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Intro</title></head><body><p>Introducción a AJAX en PHP</p></body></html>',
+        "AJAX_PHP": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX PHP</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "script.php", true); xhr.send();</script></body></html>',
+        "AJAX_Database": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Database</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "getdata.php", true); xhr.send();</script></body></html>',
+        "AJAX_XML": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX XML</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "data.xml", true); xhr.send();</script></body></html>',
+        "AJAX_Live_Search": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Live Search</title></head><body><input type="text" onkeyup="showResult(this.value)"><div id="livesearch"></div><script>function showResult(str) { var xhr = new XMLHttpRequest(); xhr.open("GET", "livesearch.php?q=" + str, true); xhr.send(); }</script></body></html>',
+        "AJAX_Poll": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Poll</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "poll.php", true); xhr.send();</script></body></html>'
+    },
 # Crear la carpeta principal
 os.makedirs("PHP_Examples", exist_ok=True)
 
