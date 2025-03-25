@@ -89,6 +89,38 @@ structure = {
         "AJAX_Live_Search": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Live Search</title></head><body><input type="text" onkeyup="showResult(this.value)"><div id="livesearch"></div><script>function showResult(str) { var xhr = new XMLHttpRequest(); xhr.open("GET", "livesearch.php?q=" + str, true); xhr.send(); }</script></body></html>',
         "AJAX_Poll": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Poll</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "poll.php", true); xhr.send();</script></body></html>'
     },
+        "Opcionales": {
+        "PHP_Reference": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Reference</title></head><body><p>Referencia de PHP</p></body></html>',
+        "PHP_Overview": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Overview</title></head><body><p>Resumen de PHP</p></body></html>',
+        "PHP_Array": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Array</title></head><body><?php $arr = array("a", "b"); echo $arr[0]; ?></body></html>',
+        "PHP_Calendar": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Calendar</title></head><body><?php echo cal_days_in_month(CAL_GREGORIAN, 2, 2023); ?></body></html>',
+        "PHP_Date": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Date</title></head><body><?php echo date("Y-m-d"); ?></body></html>',
+        "PHP_Directory": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Directory</title></head><body><?php $dir = opendir("."); echo readdir($dir); closedir($dir); ?></body></html>',
+        "PHP_Error": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Error</title></head><body><?php trigger_error("Error de ejemplo"); ?></body></html>',
+        "PHP_Exception": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Exception</title></head><body><?php throw new Exception("Excepción de ejemplo"); ?></body></html>',
+        "PHP_Filesystem": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Filesystem</title></head><body><?php echo file_exists("test.txt"); ?></body></html>',
+        "PHP_Filter": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Filter</title></head><body><?php echo filter_var("test@example.com", FILTER_VALIDATE_EMAIL); ?></body></html>',
+        "PHP_FTP": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP FTP</title></head><body><?php $conn = ftp_connect("ftp.example.com"); ftp_login($conn, "user", "pass"); ftp_close($conn); ?></body></html>',
+        "PHP_JSON": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP JSON</title></head><body><?php $json = \'{"name": "Juan"}\'; echo json_decode($json)->name; ?></body></html>',
+        "PHP_Keywords": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Keywords</title></head><body><p>Palabras clave en PHP</p></body></html>',
+        "PHP_Libxml": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Libxml</title></head><body><?php libxml_use_internal_errors(true); ?></body></html>',
+        "PHP_Mail": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Mail</title></head><body><?php mail("test@example.com", "Asunto", "Mensaje"); ?></body></html>',
+        "PHP_Math": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Math</title></head><body><?php echo pi(); ?></body></html>',
+        "PHP_Misc": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Misc</title></head><body><?php echo uniqid(); ?></body></html>',
+        "PHP_MySQLi": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP MySQLi</title></head><body><?php $conn = new mysqli("localhost", "user", "pass", "db"); echo $conn->host_info; ?></body></html>',
+        "PHP_Network": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Network</title></head><body><?php $ip = gethostbyname("www.example.com"); echo $ip; ?></body></html>',
+        "PHP_Output_Control": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Output Control</title></head><body><?php ob_start(); echo "Hola"; $output = ob_get_clean(); echo $output; ?></body></html>',
+        "PHP_RegEx": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP RegEx</title></head><body><?php echo preg_match("/hello/", "hello world"); ?></body></html>',
+        "PHP_SimpleXML": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP SimpleXML</title></head><body><?php $xml = simplexml_load_file("note.xml"); echo $xml->to; ?></body></html>',
+        "PHP_Stream": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Stream</title></head><body><?php $stream = fopen("test.txt", "r"); echo fread($stream, 10); fclose($stream); ?></body></html>',
+        "PHP_String": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP String</title></head><body><?php echo str_replace("world", "PHP", "Hello world!"); ?></body></html>',
+        "PHP_Variable_Handling": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Variable Handling</title></head><body><?php $x = 5; echo is_int($x); ?></body></html>',
+        "PHP_XML_Parser": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP XML Parser</title></head><body><?php $parser = xml_parser_create(); ?></body></html>',
+        "PHP_Zip": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Zip</title></head><body><?php $zip = new ZipArchive(); $zip->open("test.zip", ZipArchive::CREATE); ?></body></html>',
+        "PHP_Timezones": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Timezones</title></head><body><?php date_default_timezone_set("America/New_York"); echo date("H:i:s"); ?></body></html>'
+    }
+ }
+
 # Crear la carpeta principal
 os.makedirs("PHP_Examples", exist_ok=True)
 
