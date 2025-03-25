@@ -25,7 +25,7 @@ structure = {
         "PHP_Arrays": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Arrays</title></head><body><?php $fruits = array("Manzana", "Plátano"); echo $fruits[0]; ?></body></html>',
         "PHP_Superglobals": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Superglobals</title></head><body><?php echo $_SERVER["HTTP_HOST"]; ?></body></html>',
         "PHP_RegEx": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP RegEx</title></head><body><?php $pattern = "/hello/"; echo preg_match($pattern, "hello world"); ?></body></html>'
-    },
+       },
         "Forms": {
         "PHP_Forms": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Forms</title></head><body><p>Introducción a formularios en PHP</p></body></html>',
         "PHP_Form_Handling": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Handling</title></head><body><form method="post" action="welcome.php"><input type="text" name="name"><input type="submit"></form></body></html>',
@@ -33,7 +33,7 @@ structure = {
         "PHP_Form_Required": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Required</title></head><body><form method="post"><input type="text" name="name" required><input type="submit"></form></body></html>',
         "PHP_Form_URL_Email": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form URL/E-mail</title></head><body><form method="post"><input type="email" name="email"><input type="submit"></form></body></html>',
         "PHP_Form_Complete": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Form Complete</title></head><body><form method="post" action="process.php"><input type="text" name="name"><input type="email" name="email"><input type="submit"></form></body></html>'
-    },  
+       },  
         "Advanced": {
         "PHP_Date_and_Time": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Date and Time</title></head><body><?php echo date("Y-m-d"); ?></body></html>',
         "PHP_Include": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Include</title></head><body><?php include "header.php"; ?></body></html>',
@@ -48,7 +48,7 @@ structure = {
         "PHP_Callback_Functions": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Callback Functions</title></head><body><?php function greet($name) { echo "Hola, $name"; } call_user_func("greet", "Juan"); ?></body></html>',
         "PHP_JSON": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP JSON</title></head><body><?php $json = \'{"name": "Juan"}\'; $obj = json_decode($json); echo $obj->name; ?></body></html>',
         "PHP_Exceptions": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Exceptions</title></head><body><?php try { throw new Exception("Error"); } catch (Exception $e) { echo $e->getMessage(); } ?></body></html>'
-    },
+       },
         "OOP": {
         "PHP_What_is_OOP": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP What is OOP</title></head><body><p>Introducción a OOP en PHP</p></body></html>',
         "PHP_Classes_Objects": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Classes/Objects</title></head><body><?php class Person { public $name; } $p = new Person(); $p->name = "Juan"; echo $p->name; ?></body></html>',
@@ -64,7 +64,7 @@ structure = {
         "PHP_Static_Properties": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Static Properties</title></head><body><?php class Counter { static $count = 0; } echo Counter::$count; ?></body></html>',
         "PHP_Namespaces": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Namespaces</title></head><body><?php namespace MyProject; class Person { } $p = new Person(); ?></body></html>',
         "PHP_Iterables": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Iterables</title></head><body><?php function printIterable(iterable $myIterable) { foreach ($myIterable as $item) { echo $item; } } $arr = ["a", "b", "c"]; printIterable($arr); ?></body></html>'
-    },
+       },
         "MySQL_Database": {
         "MySQL_Database": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>MySQL Database</title></head><body><p>Introducción a MySQL en PHP</p></body></html>',
         "MySQL_Connect": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>MySQL Connect</title></head><body><?php $conn = new mysqli("localhost", "user", "pass", "db"); if ($conn->connect_error) { die("Conexión fallida: " . $conn->connect_error); } echo "Conectado"; ?></body></html>',
@@ -80,7 +80,7 @@ structure = {
         "MySQL_Delete_Data": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>MySQL Delete Data</title></head><body><?php $conn = new mysqli("localhost", "user", "pass", "mydb"); $sql = "DELETE FROM users WHERE id=1"; if ($conn->query($sql) === TRUE) { echo "Dato eliminado"; } ?></body></html>',
         "MySQL_Update_Data": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>MySQL Update Data</title></head><body><?php $conn = new mysqli("localhost", "user", "pass", "mydb"); $sql = "UPDATE users SET name=\'Pedro\' WHERE id=1"; if ($conn->query($sql) === TRUE) { echo "Dato actualizado"; } ?></body></html>',
         "MySQL_Limit_Data": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>MySQL Limit Data</title></head><body><?php $conn = new mysqli("localhost", "user", "pass", "mydb"); $result = $conn->query("SELECT * FROM users LIMIT 5"); while ($row = $result->fetch_assoc()) { echo $row["name"]; } ?></body></html>'
-    },
+       },
         "AJAX": {
         "AJAX_Intro": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Intro</title></head><body><p>Introducción a AJAX en PHP</p></body></html>',
         "AJAX_PHP": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX PHP</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "script.php", true); xhr.send();</script></body></html>',
@@ -88,7 +88,7 @@ structure = {
         "AJAX_XML": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX XML</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "data.xml", true); xhr.send();</script></body></html>',
         "AJAX_Live_Search": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Live Search</title></head><body><input type="text" onkeyup="showResult(this.value)"><div id="livesearch"></div><script>function showResult(str) { var xhr = new XMLHttpRequest(); xhr.open("GET", "livesearch.php?q=" + str, true); xhr.send(); }</script></body></html>',
         "AJAX_Poll": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>AJAX Poll</title></head><body><script>var xhr = new XMLHttpRequest(); xhr.open("GET", "poll.php", true); xhr.send();</script></body></html>'
-    },
+       },
         "Opcionales": {
         "PHP_Reference": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Reference</title></head><body><p>Referencia de PHP</p></body></html>',
         "PHP_Overview": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Overview</title></head><body><p>Resumen de PHP</p></body></html>',
@@ -118,8 +118,9 @@ structure = {
         "PHP_XML_Parser": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP XML Parser</title></head><body><?php $parser = xml_parser_create(); ?></body></html>',
         "PHP_Zip": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Zip</title></head><body><?php $zip = new ZipArchive(); $zip->open("test.zip", ZipArchive::CREATE); ?></body></html>',
         "PHP_Timezones": '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>PHP Timezones</title></head><body><?php date_default_timezone_set("America/New_York"); echo date("H:i:s"); ?></body></html>'
-    }
- }
+       }
+}
+ 
 
 # Crear la carpeta principal
 os.makedirs("PHP_Examples", exist_ok=True)
